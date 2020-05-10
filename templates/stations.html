@@ -1,0 +1,22 @@
+
+{% extends "layout.html" %}
+{% block content %} 
+<h3 class="navbar-brand mr-4">List of stations:</h3>
+
+<table border="1">
+    <tr><th>Station Names</th></tr>
+    {% for station in stations %}
+    <tr>
+        <td>{{ station }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<hr>
+<h3 class="navbar-brand mr-4">Stations List - Raw format:</h3>
+<br>
+{{ stations }}
+
+{% endblock %}
+
+
+

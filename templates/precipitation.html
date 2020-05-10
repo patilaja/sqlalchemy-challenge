@@ -1,0 +1,19 @@
+    {% extends "layout.html" %}
+    {% block content %} 
+    <h3 class="navbar-brand mr-4">Precipitation by Date:</h3>
+    
+    <table border="1">
+        <tr><th align="middle">Date</th><th align="middle">Precipitation</th></tr>
+        {% for key,value in per_dct.items() %}
+        <tr>
+            <td align="middle">{{ key }}</td>
+            <td align="middle">{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <h3 class="navbar-brand mr-4">Precipitation by Date - Raw format:</h3>
+    <br>
+    {{ perc }}
+    
+    {% endblock %}

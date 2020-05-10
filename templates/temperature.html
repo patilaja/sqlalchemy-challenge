@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+{% block content %} 
+<h3 class="navbar-brand mr-4">Minimum, Average and Maximun  temperature for:</h3>
+<hr>
+<table>
+    {% if startdate and enddate %}
+    <tr>
+        <td colspan="3">Start Date: {{ startdate}} </td>
+    </tr>
+    <tr>
+        <td colspan="3">End Date: {{ enddate }}</td>
+    </tr>
+    {% elif startdate %}
+    <tr>
+        <td colspan="3">Start Date: {{ startdate}}</td>
+    </tr>
+    {% endif %}
+    <tr><td colspan="3"><hr></td></tr>
+    <tr>
+        <table border="1">
+            <tr>
+                <th>Mini Temp</th><th>Maxi Temp</th><th>Avg Temp</th>
+            </tr>
+            <tr>
+                {% for item in calc_temp %}
+                <td align="center">{{ item[0] }}</td>
+                <td align="center">{{ item[1] }}</td>
+                <td align="center">{{ item[2] }}</td>
+                {% endfor %}
+            </tr>
+        </table>
+    </tr>
+ 
+</table>
+<hr>
+<h3 class="navbar-brand mr-4">Temperature List - Raw format:</h3>
+<br>
+{{ calc }}
+
+{% endblock %}
+
+
+

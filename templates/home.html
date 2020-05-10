@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h5>List of all available Hawaii API routes (Web page output)</h5>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-light">
+            List of precipitations for last year (Get a year ago date from the max date):<br>
+            <a href="/api/v1.0/wprecipitation">/api/v1.0/precipitation</a>
+        </li>
+        <li class="list-group-item list-group-item-light"> 
+            List stations from the dataset: <br>
+            <a href="/api/v1.0/wstations">/api/v1.0/stations</a>
+        </li>
+        <li class="list-group-item list-group-item-light">
+            Dates and temperature observations of the most active station for the last year (Get a year ago date from the max date):<br>
+            <a href="/api/v1.0/wtobs">/api/v1.0/tobs</a>
+        </li>
+        <li class="list-group-item list-group-item-light">
+            List of tmin, tmax, tavg for the dates greater than or equal to the date (Year-Month-Day format):<br>
+            <a href="/api/v1.0/w/2017-01-01">/api/v1.0/2017-01-01</a>
+        </li>
+        <li class="list-group-item list-group-item-light">
+            List of tmin, tmax, tavg for the dates range - start date and end date (Year-Month-Day format):<br> 
+            <a href="/api/v1.0/w/2017-01-01/2017-01-07">/api/v1.0/2017-01-01/2017-01-07</a>
+         </li>
+    </ul>
+</div>
+{% endblock %}

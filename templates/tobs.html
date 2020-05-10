@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+{% block content %} 
+<h3 class="navbar-brand mr-4">Most active station- Observed Temperatures:</h3>
+<hr>
+    <table border="1">
+        <tr>
+            <th>Date</th><th>Temperature</th> 
+        </tr>
+        <tr>
+        {% for item in tobs %}
+        <tr>
+            <td align="center">{{ item[0] }}</td>
+            <td align="center">{{ item[1] }}</td>
+        </tr>
+            </td>
+        {% endfor %}
+        </tr>
+    </table>
+<hr>
+<h3 class="navbar-brand mr-4">Most active stations observed Temperature - Raw format:</h3>
+<br>
+{{ tobs_json }}
+
+{% endblock %}
+
+
+
